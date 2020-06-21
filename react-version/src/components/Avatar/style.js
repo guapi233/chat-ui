@@ -1,14 +1,13 @@
 import styled, { css } from 'styled-components'
+import { circle } from "utils/mixin" 
 
 // 类似于CSS预处理器中的Mixin，用于复用CSS代码片段
 const circleMixinFunc = (color, size = "8px") => css`
   content: "";
   display: block;
   position: absolute;
-  width: ${ size };
-  height: ${ size };
-  border-radius: 50%;
-  background-color: ${ color };
+
+  ${circle(color, size)}
 `
 
 // 最外层包裹
